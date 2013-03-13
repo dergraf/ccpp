@@ -1,0 +1,23 @@
+# username, password if HTTP Basic Auth is used
+username = ""
+password = ""
+# URL where the cc.xml file is served
+ccxml_url = "http://jenkins.somehost.com/cc.xml"
+
+dummy = {
+    # the name of the project
+    "name": "dummy project",
+    # the path where the project is cloned to
+    "path": "/home/dummy/myproject",
+    # the repo from where to fetch the project
+    "repo": "git://github.com/dergraf/ccpp.git",
+    # the commands to run the first time the build is successful
+    "init": ["ls -la"],
+    # the commands to run if the build was successful
+    "update": ["ls -la"],
+    # the commands to run if the build was failing
+    "failed": ["ls -la"],
+}
+
+# the jobs that should run
+jobs = [dummy]
